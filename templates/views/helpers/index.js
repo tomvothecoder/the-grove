@@ -196,6 +196,11 @@ module.exports = function () {
 		return ('/blog/post/' + postSlug);
 	};
 
+	// Direct url link to a specific post
+	_helpers.productUrl = function (productSlug, options) {
+		return ('/products/' + productSlug);
+	};	
+
 	// might be a ghost helper
 	// used for pagination urls on blog
 	_helpers.pageUrl = function (pageNumber, options) {
