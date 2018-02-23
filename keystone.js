@@ -34,7 +34,12 @@ keystone.init({
 	'session': true,
 	'auth': true,
 	'user model': 'User',
+	
+	
 });
+
+// Logo for login page
+keystone.set('signin logo', '../images/logo.png');
 
 // Load your project's Models
 keystone.import('models');
@@ -73,6 +78,8 @@ if (!process.env.MAILGUN_API_KEY || !process.env.MAILGUN_DOMAIN) {
 	+ '\n\nCreate a mailgun account and add the credentials to the .env file to'
 	+ '\nset up your mailgun integration');
 }
+
+
 
 
 keystone.start();
