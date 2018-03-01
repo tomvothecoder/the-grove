@@ -6,9 +6,17 @@ $font-size-base: 14px;
     background-image: url("../images/uop2-min.jpg");
     
     background-size: 100%;
+    
     width:100%;
-    height: 800px;
+    height: auto;
+    background-repeat: no-repeat;
+    min-height: 700px;
+
+   
+   
 }
+
+
 
 .navbar-brand{
     background-image: url("../images/the_grove_logo.png");
