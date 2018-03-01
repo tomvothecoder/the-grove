@@ -5821,6 +5821,17 @@ button.close {
   .hidden-print {
     display: none !important; } }
 
+.jumbotron {
+  background-image: url("../images/uop2-min.jpg");
+  background-size: 100%;
+  width: 100%;
+  height: 800px; }
+
+.navbar-brand {
+  background-image: url("../images/the_grove_logo.png");
+  background-size: 100%;
+  width: 100px; }
+
 #header {
   margin-top: 30px; }
 
