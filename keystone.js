@@ -6,6 +6,7 @@ require('dotenv').config();
 var keystone = require('keystone');
 var handlebars = require('express-handlebars');
 
+
 // Initialise Keystone with your project's configuration.
 // See http://keystonejs.com/guide/config for available options
 // and documentation.
@@ -67,6 +68,7 @@ keystone.set('nav', {
 });
 
 // Start Keystone to connect to your database and initialise the web server
+
 
 keystone.set('cloudinary config', {
 	cloud_name: 'dh7qhsimh',
