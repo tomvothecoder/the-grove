@@ -5834,6 +5834,10 @@ button.close {
   background-size: 100%;
   width: 100px; }
 
+.product-images {
+  width: 160px;
+  height: 160px; }
+
 #header {
   margin-top: 30px; }
 
