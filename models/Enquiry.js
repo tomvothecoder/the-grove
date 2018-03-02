@@ -61,7 +61,7 @@ Enquiry.schema.methods.sendNotificationEmail = function (callback) {
 			to: admins,
 			from: {
 				name: 'The Grove',
-				email: 'contact@the-grove.com',
+				email: 'tomv96@gmail.com',
 			},
 			subject: 'New Enquiry for The Grove',
 			enquiry: enquiry,

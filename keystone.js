@@ -34,8 +34,8 @@ keystone.init({
 	'session': true,
 	'auth': true,
 	'user model': 'User',
-	
-	
+
+
 });
 
 // Logo for login page
@@ -68,16 +68,24 @@ keystone.set('nav', {
 
 // Start Keystone to connect to your database and initialise the web server
 
+keystone.set('cloudinary config', {
+	cloud_name: 'dh7qhsimh',
+	api_key: '831136695471268',
+	api_secret: 'LqIe7zO0SuFSDfa5Il8sKpOzEZU'
+});
+
+
 
 if (!process.env.MAILGUN_API_KEY || !process.env.MAILGUN_DOMAIN) {
-	console.log('----------------------------------------'
-	+ '\nWARNING: MISSING MAILGUN CREDENTIALS'
-	+ '\n----------------------------------------'
-	+ '\nYou have opted into email sending but have not provided'
-	+ '\nmailgun credentials. Attempts to send will fail.'
-	+ '\n\nCreate a mailgun account and add the credentials to the .env file to'
-	+ '\nset up your mailgun integration');
+	console.log('----------------------------------------' +
+		'\nWARNING: MISSING MAILGUN CREDENTIALS' +
+		'\n----------------------------------------' +
+		'\nYou have opted into email sending but have not provided' +
+		'\nmailgun credentials. Attempts to send will fail.' +
+		'\n\nCreate a mailgun account and add the credentials to the .env file to' +
+		'\nset up your mailgun integration');
 }
+
 
 
 
