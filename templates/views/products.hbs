@@ -1,63 +1,69 @@
 <div class="container">
-    <h1>Products -</h1>
-    {{!--
-    <div class="row searchFilter">
-        <div class="col-md-6 col lg-6 pull-right">
-            <div class="input-group">
-                <input id="table_filter" type="text" class="form-control" aria-label="Text input with segmented button dropdown">
-                <div class="input-group-btn">
-                    <button type="button" class="btn btn-secondary dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true"
-                        aria-expanded="false">
-                        <span class="label-icon">Category</span>
-                        <span class="caret">&nbsp;</span>
-                    </button>
-                    <div class="dropdown-menu dropdown-menu-right">
-                        <ul class="category_filters">
-                            <li>
-                                <input class="cat_type category-input" data-label="All" id="all" value="" name="radios" type="radio">
-                                <label for="all">All</label>
-                            </li>
-                            <li>
-                                <input type="radio" name="radios" id="Chips" value="Chips">
-                                <label class="category-label" for="Chips">Chips</label>
-                            </li>
-                            <li>
-                                <input type="radio" name="radios" id="Drinks" value="Drinks">
-                                <label class="category-label" for="Drinks">Drinks</label>
-                            </li>
+	<h1>Products -</h1>
+	{{!--
+	<div class="row searchFilter">
+		<div class="col-md-6 col lg-6 pull-right">
+			<div class="input-group">
+				<input id="table_filter" type="text" class="form-control" aria-label="Text input with segmented button dropdown">
+				<div class="input-group-btn">
+					<button type="button" class="btn btn-secondary dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true"
+					aria-expanded="false">
+						<span class="label-icon">Category</span>
+						<span class="caret">&nbsp;</span>
+					</button>
+					<div class="dropdown-menu dropdown-menu-right">
+						<ul class="category_filters">
+							<li>
+								<input class="cat_type category-input" data-label="All" id="all" value="" name="radios" type="radio">
+								<label for="all">All</label>
+							</li>
+							<li>
+								<input type="radio" name="radios" id="Chips" value="Chips">
+								<label class="category-label" for="Chips">Chips</label>
+							</li>
+							<li>
+								<input type="radio" name="radios" id="Drinks" value="Drinks">
+								<label class="category-label" for="Drinks">Drinks</label>
+							</li>
 
-                        </ul>
-                    </div>
-                    <button id="searchBtn" type="button" class="btn btn-secondary btn-search">
-                        <span class="glyphicon glyphicon-search">&nbsp;</span>
-                        <span class="label-icon">Search</span>
-                    </button>
-                </div>
-            </div>
-        </div>
-    </div> --}}
-    <div class="row">
-        <div class="col-md-12 col-lg-12">
-            <div class="row">
-                {{# each products}}
-                <div class="col-md-4 col-lg-4">
-                    <h2>
-                        <a href="{{productUrl slug}}">{{{title}}}</a>
+						</ul>
+					</div>
+					<button id="searchBtn" type="button" class="btn btn-secondary btn-search">
+						<span class="glyphicon glyphicon-search">&nbsp;</span>
+						<span class="label-icon">Search</span>
+					</button>
+				</div>
+			</div>
+		</div>
+	</div> --}}
+	<div class="row">
+		<div class="col-md-12 col-lg-12">
+			<div class="row">
+				{{# each products}}
+				<div class="col-md-4 col-lg-4">
+					<h2>
+						<a href="{{productUrl slug}}">{{{title}}}</a>
 
-                    </h2>
+					</h2>
 
-                    {{#if image}}
-                    <img src="{{{cloudinaryUrl image }}}" class="thumbnail product-images"> {{/if}} {{#if qty}}
-                    <h1>IN-STOCK</h1>
-                    {{else}}
-                    <h1>Out of Stock</h1>
-
+					{{#if image}}
+					<img src="{{{cloudinaryUrl image }}}" class="thumbnail product-images"> 
                     {{/if}}
-                </div>
-                {{/each}}
-            </div>
+                    
+					<p>Quantity: {{qty}}</p>
+					{{#if qty}}
+					<p>In-Stock</p>
+					{{else}}
+					<p>Out of Stock</p>
 
 
-        </div>
-    </div>
+
+					{{/if}}
+				</div>
+				{{/each}}
+			</div>
+
+
+		</div>
+	</div>
 </div>

@@ -6,6 +6,7 @@ require('dotenv').config();
 var keystone = require('keystone');
 var handlebars = require('express-handlebars');
 
+
 // Initialise Keystone with your project's configuration.
 // See http://keystonejs.com/guide/config for available options
 // and documentation.
@@ -60,6 +61,7 @@ keystone.set('routes', require('./routes'));
 
 // Configure the navigation bar in Keystone's Admin UI
 keystone.set('nav', {
+	store: 'products',
 	posts: ['posts', 'post-categories'],
 	galleries: 'galleries',
 	enquiries: 'enquiries',
@@ -67,6 +69,7 @@ keystone.set('nav', {
 });
 
 // Start Keystone to connect to your database and initialise the web server
+
 
 keystone.set('cloudinary config', {
 	cloud_name: 'dh7qhsimh',
@@ -85,6 +88,8 @@ if (!process.env.MAILGUN_API_KEY || !process.env.MAILGUN_DOMAIN) {
 		'\n\nCreate a mailgun account and add the credentials to the .env file to' +
 		'\nset up your mailgun integration');
 }
+
+
 
 
 
