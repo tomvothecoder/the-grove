@@ -61,6 +61,7 @@ keystone.set('routes', require('./routes'));
 
 // Configure the navigation bar in Keystone's Admin UI
 keystone.set('nav', {
+	store: 'products',
 	posts: ['posts', 'post-categories'],
 	galleries: 'galleries',
 	enquiries: 'enquiries',
@@ -87,6 +88,8 @@ if (!process.env.MAILGUN_API_KEY || !process.env.MAILGUN_DOMAIN) {
 		'\n\nCreate a mailgun account and add the credentials to the .env file to' +
 		'\nset up your mailgun integration');
 }
+
+
 
 
 
