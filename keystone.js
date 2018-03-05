@@ -3,9 +3,28 @@
 require('dotenv').config();
 
 // Require keystone
+var app = require('express')();
 var keystone = require('keystone');
 var handlebars = require('express-handlebars');
 
+var http = require('http').Server(app);
+var io = require('socket.io')(http);
+
+
+
+
+/* app.get('/', function(req, res){
+  res.sendFile(__dirname + '/templates/views/products.hbs');
+});
+
+io.on('connection', function(socket){
+  console.log('a user connected');
+});
+
+http.listen(3000, function(){
+  console.log('listening on *:3000');
+}); */
+    
 
 // Initialise Keystone with your project's configuration.
 // See http://keystonejs.com/guide/config for available options
@@ -96,3 +115,16 @@ if (!process.env.MAILGUN_API_KEY || !process.env.MAILGUN_DOMAIN) {
 
 
 keystone.start();
+
+/* app.get('/', function (req, res) {
+	res.sendFile(__dirname + '/templates/products.hbs');
+})
+
+io.on('connection', function (socket) {
+	console.log('a user connected');
+});
+
+http.listen(3000, function () {
+	console.log('listening on *:3000');
+});
+ */
