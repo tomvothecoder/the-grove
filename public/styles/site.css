@@ -5822,29 +5822,139 @@ button.close {
     display: none !important; } }
 
 .jumbotron {
-  background-image: url("../images/uop2-min.jpg");
+  background-image: url("https://images.unsplash.com/photo-1498579397066-22750a3cb424?ixlib=rb-0.3.5&s=b4859af68fadcc23ccee0b83ff551245&auto=format&fit=crop&w=1350&q=80");
   background-size: 100%;
   width: 100%;
   height: auto;
   background-repeat: no-repeat;
-  min-height: 700px; }
+  min-height: 400px; }
 
-.navbar-brand {
-  background-image: url("../images/the_grove_logo.png");
-  background-size: 100%;
-  width: 100px; }
+.jumbotron h1 {
+  color: white;
+  text-align: center;
+  font-size: 80px; }
+
+.mission h3 {
+  text-align: center;
+  color: white; }
+
+.mission {
+  padding-bottom: 40px;
+  background-color: lightblue; }
+
+.navbar-default {
+  background-color: transparent;
+  border-color: transparent; }
+
+.navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav > .active > a:hover, .navbar-default .navbar-nav > .active > a:focus {
+  background-color: transparent; }
 
 .product-images {
   width: 200px;
   height: 200px;
   border-width: 0px; }
 
+img {
+  height: 170px;
+  padding: 5px; }
+
+.categories {
+  float: center;
+  width: 960px;
+  margin: 0 auto;
+  height: 350px;
+  padding-top: 15px; }
+
+.categories .h3 {
+  color: black; }
+
+.row1 {
+  float: left;
+  height: 300px;
+  width: 300px;
+  margin: 5px;
+  text-align: center; }
+
+.row2 {
+  float: left;
+  height: 300px;
+  width: 300px;
+  margin: 5px;
+  text-align: center; }
+
+.row3 {
+  float: left;
+  height: 300px;
+  width: 300px;
+  margin: 5px;
+  text-align: center; }
+
+.column1 {
+  float: left;
+  width: 50%;
+  height: 400px;
+  background-color: #d6f5d6; }
+
+.column1 h2 {
+  padding-left: 20px; }
+
+.column1 h5 {
+  padding-left: 20px; }
+
+.column2 {
+  float: left;
+  width: 50%;
+  height: 400px;
+  background-color: #ffe6cc; }
+
+.questions_comments {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  background-color: #cce6ff; }
+
+.questions_comments h2 {
+  color: black; }
+
+.left {
+  float: left;
+  width: 25%;
+  height: 300px;
+  margin-top: 50px !important;
+  margin-bottom: 50px !important; }
+
+.center {
+  float: left;
+  width: 50%;
+  height: 300px;
+  margin-top: 50px !important;
+  margin-bottom: 50px !important;
+  text-align: center; }
+
+.right {
+  float: left;
+  width: 25%;
+  height: 300px;
+  margin-top: 50px !important;
+  margin-bottom: 50px !important; }
+
+.left img {
+  margin: 70px; }
+
+.right img {
+  margin: 70px; }
+
+.footer h3 {
+  text-align: center;
+  color: white; }
+
+.footer {
+  background-color: white; }
+
 #header {
   margin-top: 30px; }
 
 #footer {
   margin-top: 30px;
-  border-top: 1px solid #eeeeee;
   padding-top: 30px;
   color: #777777; }
 
