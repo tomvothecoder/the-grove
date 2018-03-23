@@ -8,8 +8,7 @@ var keystone = require('keystone');
 var handlebars = require('express-handlebars');
 
 var http = require('http').Server(app);
-var io = require('socket.io')(http);
-
+var socketio = require('socket.io');
 
 
 
@@ -24,7 +23,7 @@ io.on('connection', function(socket){
 http.listen(3000, function(){
   console.log('listening on *:3000');
 }); */
-    
+
 
 // Initialise Keystone with your project's configuration.
 // See http://keystonejs.com/guide/config for available options
@@ -109,22 +108,38 @@ if (!process.env.MAILGUN_API_KEY || !process.env.MAILGUN_DOMAIN) {
 }
 
 
+keystone.start({
+	onHttpServerCreated: function () {
+		keystone.set('io', socketio.listen(keystone.httpServer));
+	},
+	onStart: function () {
+		var io = keystone.get('io');
+		var session = keystone.expressSession;
 
+		// Share session between express and socketio
+		io.use(function (socket, next) {
+			session(socket.handshake, {}, next);
+		});
 
+		// Socketio connection
+		io.on('connect', function (socket) {
+			console.log('--- User connected');
 
+			// Set session variables in route controller
+			// which is going to load the client side socketio
+			// in this case, ./routes/index.js
+			console.log(socket.handshake.session);
+			socket.emit('msg', socket.handshake.session.message);
 
+			socket.on('chat message', function (msg) {
+				io.emit('chat message', msg);
+				console.log('message: ' + msg);
+			});
 
-keystone.start();
+			socket.on('disconnect', function () {
+				console.log('--- User disconnected');
+			});
+		});
+	}
 
-/* app.get('/', function (req, res) {
-	res.sendFile(__dirname + '/templates/products.hbs');
-})
-
-io.on('connection', function (socket) {
-	console.log('a user connected');
 });
-
-http.listen(3000, function () {
-	console.log('listening on *:3000');
-});
- */
