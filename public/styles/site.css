@@ -5846,7 +5846,9 @@ button.close {
   background-color: transparent;
   border-color: transparent; }
 
-.navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav > .active > a:hover, .navbar-default .navbar-nav > .active > a:focus {
+.navbar-default .navbar-nav > .active > a,
+.navbar-default .navbar-nav > .active > a:hover,
+.navbar-default .navbar-nav > .active > a:focus {
   background-color: transparent; }
 
 .product-images {
@@ -5949,6 +5951,43 @@ img {
 
 .footer {
   background-color: white; }
+
+/* products.hbs */
+#messages {
+  list-style-type: none;
+  margin: 0;
+  padding: 0; }
+  #messages form {
+    background: #000;
+    padding: 3px;
+    position: fixed;
+    bottom: 0;
+    width: 100%; }
+  #messages form input {
+    border: 0;
+    padding: 10px;
+    width: 90%;
+    margin-right: .5%;
+    position: fixed; }
+  #messages form button {
+    width: 9%;
+    background: #82e0ff;
+    border: none;
+    padding: 10px; }
+
+#messages li {
+  padding: 5px 10px; }
+
+#messages li:nth-child(odd) {
+  background: #eee; }
+
+#chatBox {
+  height: 300px;
+  position: relative; }
+
+#formBar {
+  position: absolute;
+  bottom: 0; }
 
 #header {
   margin-top: 30px; }
