@@ -1,21 +1,26 @@
 // Override Bootstrap variables in this file, e.g.
-.body{
+* {
+	-webkit-border-radius: 0px !important;
+	-moz-border-radius: 0px !important;
+	border-radius: 0px !important;
+}
+
+.body {
 	font-family: 'Quicksand', sans-serif;
 }
 
-.container{
+.container {
 	font-family: 'Quicksand', sans-serif;
 }
 
-
-#header{
+#header {
 	font-size: 1.5em;
 }
 
 $font-size-base: 14px;
 .jumbotron {
 	background-image: url("https://images.unsplash.com/photo-1498579397066-22750a3cb424?ixlib=rb-0.3.5&s=b4859af68fadcc23ccee0b83ff551245&auto=format&fit=crop&w=1350&q=80"); //opacity: 0.9;
-	background-size: 100%;
+	background-size: 100% auto;
 	width: 100%;
 	height: auto;
 	background-repeat: no-repeat;
@@ -36,16 +41,9 @@ $font-size-base: 14px;
 .mission {
 	padding-bottom: 40px;
 	background-color: lightblue;
-	font-size:1.4em;
-
-	
+	font-size: 1.4em;
 }
 
-// .navbar-brand{
-//     background-image: url("../images/the_grove_logo.png");
-//     background-size: 100%;
-//     width:100px;
-// }
 .navbar-default {
 	background-color: transparent;
 	border-color: transparent;
@@ -57,55 +55,57 @@ $font-size-base: 14px;
 	background-color: transparent;
 }
 
-#options img{
-	width:50%;
-	height:50%;
+#options img {
+	width: 50%;
+	height: 50%;
 }
 
 #product {
-	text-align:center;
-	float:center;
-	border-width:2px;
-	padding: 5px 5px 5px 5px;
-
-
-}
-
-#promotion{
-	text-align:center;
-	float:center;
-	padding: 5px 5px 5px 5px;
-
-	
-}
-
-#balance{
-	text-align:center;
-	float:center;
+	text-align: center;
+	float: center;
+	border-width: 2px;
 	padding: 5px 5px 5px 5px;
 }
+
+#promotion {
+	text-align: center;
+	float: center;
+	padding: 5px 5px 5px 5px;
+}
+
+#balance {
+	text-align: center;
+	float: center;
+	padding: 5px 5px 5px 5px;
+}
+
 .product-images {
 	width: 200px;
 	height: 200px;
 	border-width: 0px;
 }
 
-#featured{
-	margin-top:3%;
-	float:center;
+#featured {
+	margin-top: 3%;
+	float: center;
 }
-
 
 #footer {
 	font-size: 1.5em;
-	margin-top:3%
-}
-#footer img{
-	width:60%;
-	height:60%;
+	margin-top: 3%;
+	margin-bottom: 3%;
+	text-align:center;
 }
 
-/* products.hbs */
+#footer img {
+	width: 50%;
+}
+
+/* Chat box found on default.hbs */
+
+.hidden{
+	display:none;
+}
 
 #messages {
 	form {
@@ -142,57 +142,61 @@ $font-size-base: 14px;
 }
 
 #chatBox {
-    height: 300px;
+	height: 300px;
 	position: relative;
+
+
 }
 
 #formBar {
 	position: absolute;
+	height:20%;
 	bottom: 0;
+
 }
 
-.clearFix
-{
-	clear:both;
+.clearFix {
+	clear: both;
 }
-.panel.panel-chat
-{
+
+.panel.panel-chat {
+	margin-bottom: 0%;
 	position: fixed;
-	bottom:0;
-	right:0;
+	bottom: 0;
+	right: 0;
 	max-width: 350px;
 	box-shadow: none;
 	-webkit-box-shadow: none;
 }
-.panel.panel-chat *
-{
+
+.panel.panel-chat * {
 	background: none;
 	border: none;
 }
-.panel.panel-chat .panel-heading
-{
+
+.panel.panel-chat .panel-heading {
 	background: #4b67a8;
 	border: 1px solid #2e4588;
-	color:#FFF;
+	color: #FFF;
 }
-.panel.panel-chat .panel-heading a:nth-of-type(1)
-{
+
+.panel.panel-chat .panel-heading a:nth-of-type(1) {
 	text-decoration: none;
 	width: 290px;
-	color:#FFF;
+	color: #FFF;
 	font-weight: bold;
-	float:left;
+	float: left;
 }
-.panel.panel-chat .panel-heading a:nth-of-type(2)
-{
+
+.panel.panel-chat .panel-heading a:nth-of-type(2) {
 	text-decoration: none;
 	max-width: 11px;
 	width: 11px;
-	color:#FFF;
-	float:right;
+	color: #FFF;
+	float: right;
 }
-.panel.panel-chat .panel-body
-{
+
+.panel.panel-chat .panel-body {
 	display: block;
 	padding: 0;
 	margin: 0;
@@ -203,63 +207,68 @@ $font-size-base: 14px;
 	background: #EDEFF4;
 	overflow: auto;
 }
+
 .panel.panel-chat .panel-body::-webkit-scrollbar {
-	 display: none;
- }
-.panel.panel-chat .panel-body .messageMe
-{
-	border-bottom:1px dotted #b2b2b2;
+	display: none;
 }
-.panel.panel-chat .panel-body .messageMe img
- {
-	 float:left;
-	 max-width: 50px;
-	 max-height: 50px;
- }
-.panel.panel-chat .panel-body .messageMe span
-{
-	display: block;
-	float:left;
-	padding: 5px;
-	background: #FFF;
-	min-height: 50px;
-	max-width: 280px;
-	height: 50px;
-	width: 280px;
-	word-break: break-all;
+
+.panel.panel-chat .panel-body .messageMe {
+	border-bottom: 1px dotted #b2b2b2;
 }
-.panel.panel-chat .panel-body .messageHer
-{
-	border-bottom:1px dotted #b2b2b2;
-}
-.panel.panel-chat .panel-body .messageHer img
-{
-	float:right;
+
+.panel.panel-chat .panel-body .messageMe img {
+	float: left;
 	max-width: 50px;
 	max-height: 50px;
 }
-.panel.panel-chat .panel-body .messageHer span
-{
+
+.panel.panel-chat .panel-body .messageMe span {
 	display: block;
-	float:right;
+	float: left;
 	padding: 5px;
-	background: #FFF;
+/* 	background: #FFF; */
 	min-height: 50px;
 	max-width: 280px;
 	height: 50px;
 	width: 280px;
 	word-break: break-all;
 }
-.panel.panel-chat .panel-footer
-{
+
+.panel.panel-chat .panel-body .messageHer {
+	border-bottom: 1px dotted #b2b2b2;
+}
+
+.panel.panel-chat .panel-body .messageHer img {
+	float: right;
+	max-width: 50px;
+	max-height: 50px;
+}
+
+.panel.panel-chat .panel-body .messageHer span {
+	display: block;
+	float: right;
+	padding: 5px;
+/* 	background: #FFF; */
+	min-height: 50px;
+	max-width: 280px;
+	height: 50px;
+	width: 280px;
+	word-break: break-all;
+}
+
+.panel.panel-chat .panel-footer {
 	padding: 0;
 	margin: 0;
 	border: 1px solid #b2b2b2;
-	max-height: 75px;
-	height: 75px;
+	max-height: 15%;
+	height: 15%;
 }
-.panel.panel-chat .panel-footer textarea
-{
+
+/* #m{
+	background-color:orange;
+	margin-right:-0
+} */
+.panel.panel-chat .panel-footer textarea {
 	margin-bottom: -5px;
 	resize: none;
 	width: 100%;

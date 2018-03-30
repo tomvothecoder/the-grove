@@ -16,9 +16,17 @@
 			<script src="//cdn.jsdelivr.net/html5shiv/3.7.3/html5shiv.js"></script>
 			<script src="//cdn.jsdelivr.net/respond/1.4.2/respond.min.js"></script>
 		<![endif]-->
-		<script src="/js/index.js"></script>
+
+
+	{{!-- //- jQuery 1.11.3 is included by default, and required by both Bootstrap //- and the KeystoneJS Content Editor. If
+	you are not targeting IE8, //- you can upgrade to 2.1.4 (also bundled) for better performance. --}}
+	<script src="/js/jquery/jquery-1.11.3.min.js"></script> {{!-- //- Customise which Bootstrap javascript files are served by including //- them specifically here, instead of bootstrap-3.3.5.min.js
+	--}}
+	<script src="/js/bootstrap/bootstrap-3.3.5.min.js"></script> {{{isAdminEditorJS user}}}
+
+	<script src="/js/index.js"></script>
 	<script src="/socket.io/socket.io.js"></script>
-	<script src="/js/index.js"></script> 
+	
 </head>
 
 <body>
@@ -90,6 +98,7 @@
 		<!-- The content block should contain the body of your template's content-->
 		{{{body}}}
 	</div>
+
 	<div class="container">
 		<div id="footer">
 
@@ -101,7 +110,7 @@
 		<div class="row">
 			<div class="panel panel-chat">
 				<div class="panel-heading">
-					<a href="#" class="chatMinimize" onclick="return false">
+					<a href="#" class="chatMinimize" onclick="return">
 						<span>Message Support</span>
 					</a>
 					<a href="#" class="chatClose" onclick="return false">
@@ -110,35 +119,23 @@
 					<div class="clearFix"></div>
 				</div>
 				<div class="panel-body">
-
+					<ul class="pre-scrollable text-left" id="messages"></ul>
 					<div class="clearFix"></div>
 				</div>
+
 				<div class="panel-footer">
-					<textarea name="textMessage" cols="0" rows="0"></textarea>
+					<form action="" id="formBar">
+						<input id="m" autocomplete="off" />
+						<button>Send</button>
+					</form>
+
 				</div>
 			</div>
 		</div>
 	</div>
 
-{{!-- 	<h1>The Grove Chat Support</h1>
-	<div class="col-md-6 col-lg-6 pre-scrollable" id="chatBox">
-		<div class="row">
-			<ul id="messages"></ul>
-			<form action="" id="formBar">
-				<input id="m" autocomplete="off" />
-				<button>Send</button>
-			</form>
-		</div>
 
-	</div>
-	</div>  --}}
 
-	{{!-- //- jQuery 1.11.3 is included by default, and required by both Bootstrap //- and the KeystoneJS Content Editor. If
-	you are not targeting IE8, //- you can upgrade to 2.1.4 (also bundled) for better performance. --}}
-	<script src="/js/jquery/jquery-1.11.3.min.js"></script> 
-	{{!-- //- Customise which Bootstrap javascript files are served by including //- them specifically here, instead of bootstrap-3.3.5.min.js
-	--}}
-	<script src="/js/bootstrap/bootstrap-3.3.5.min.js"></script> {{{isAdminEditorJS user}}}
 </body>
 
 </html>
