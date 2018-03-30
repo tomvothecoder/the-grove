@@ -5962,7 +5962,7 @@ button.close {
   border: none; }
 
 .panel.panel-chat .panel-heading {
-  background: #4b67a8;
+  background: #E1810D;
   border: 1px solid #2e4588;
   color: #FFF; }
 
@@ -5995,7 +5995,8 @@ button.close {
   display: none; }
 
 .panel.panel-chat .panel-body .messageMe {
-  border-bottom: 1px dotted #b2b2b2; }
+  border-bottom: 1px dotted #b2b2b2;
+  text-align: center; }
 
 .panel.panel-chat .panel-body .messageMe img {
   float: left;
