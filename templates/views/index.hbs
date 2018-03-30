@@ -1,77 +1,113 @@
-{{!< default}}
-
-
-<div class="jumbotron">
-	{{!-- </br>
-	</br>
-	<h1>The</h1> --}}
-</div>
-
-
-<div class="mission">
-	</br>
-	<h3> The Grove's mission is to provide a convenient tool for the University of the Pacific's students to use.</h3>
-</div>
-
-<div class="categories">
-	<div class="row1">
-		<h3>View Products</h3>
-
-	<a href="http://0.0.0.0:3000/products">
-  	<img src="https://image.flaticon.com/icons/svg/452/452731.svg" alt="Products">
-	</a>
+{{!< default}} <div class="jumbotron">
 
 	</div>
-	<div class="row2">	
-		<h3>View Promotions</h3>
-
-	<a href="http://0.0.0.0:3000/products">
-  	<img src="https://image.flaticon.com/icons/svg/214/214338.svg" alt="Promotions">
-	</a>
-
-	</div>
-	<div class="row3">
-		<h3>View Balance</h3>
-	<a target ="_blank" href="https://services.jsatech.com/login.php?cid=27&">
-  	<img src="https://image.flaticon.com/icons/svg/762/762095.svg" alt="Balance">
-	</a>
-
-	</div>
-</div>
 
 
-{{!-- <div class="promotions"> --}}
-	<div class="column1">
+	<div class="mission">
 		</br>
-		<h2>Featured Product</h2>
-		<h5>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec dui orci.</h5>
-	</div>
-	<div class="column2">
-		
-	</div>
-{{!-- </div> --}}
-
-<div class="questions_comments">
-	<div class="left">
-		<img src="https://image.flaticon.com/icons/svg/306/306810.svg" alt="Questions">
+		<h3> The Grove's mission:</h3>
+		<h3> To provide a wonderful shopping experience for University of the Pacific's students and faculty.</h3>
 	</div>
 
-	<div class="center">
-		</br>
-		</br>
-		</br>
-		</br>
-		</br>
-		<h2>Questions? Comments? Let us know!</h2>
-		<h5>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec dui orci, gravida sit amet enim vitae, rhoncus ultrices massa. Quisque convallis purus ut sem accumsan viverra. Praesent interdum massa et venenatis convallis.</h5>
+	<div class="container">
+		<div class="row img-responsive" id="options">
+
+			<div class="col-md-4 col-lg-4" id="product">
+				<h3>View Products</h3>
+
+				<a href="http://0.0.0.0:3000/products">
+					<img src="https://image.flaticon.com/icons/svg/452/452731.svg" alt="Products">
+				</a>
+
+			</div>
+			<div class="col-md-4 col-lg-4" id="promotion">
+				<h3>View Promotions</h3>
+
+				<a href="http://0.0.0.0:3000/products">
+					<img src="https://image.flaticon.com/icons/svg/214/214338.svg" alt="Promotions">
+				</a>
+
+			</div>
+			<div class="col-md-4 col-lg-4" id="balance">
+				<h3>View Balance</h3>
+				<a target="_blank" href="https://services.jsatech.com/login.php?cid=27&">
+					<img src="https://image.flaticon.com/icons/svg/762/762095.svg" alt="Balance">
+				</a>
+
+			</div>
+
+
+		</div>
 	</div>
 
-	<div class="right">	
-		<img src="https://image.flaticon.com/icons/svg/682/682055.svg" alt="Comments">
-	</div>
-</div>
 
-<div class="footer">
-	</br>
-	<h3> tbd </h3>
-</div>
+
+	<div class="container-fluid img-responsive" id="featured">
+		<div class="row">
+			<div class="col-md-4 col-lg-4">
+
+				<h2>Featured Products</h2>
+				<a href="/products/hot-cheetos">
+					<img src="https://www.fritolay.com/images/default-source/blue-bag-image/cheetos-crunchy-flamin-hot.png?sfvrsn=5651573a_2"
+					 alt="cheetos">
+				</a>
+
+
+			</div>
+
+			<div class="col-md-6 col-lg-6">
+
+			</div>
+		</div>
+	</div>
+	</div>
+
+	<div class="container">
+		<div class="row">
+			<div class="col-md-12 col-lg-12">
+				<div class="row">
+					{{# each products}}
+					<div class="col-md-4 col-lg-4">
+						<h2>
+							<a href="{{productUrl slug}}">{{{title}}}</a>
+
+						</h2>
+
+						{{#if image}}
+						<img src="{{{cloudinaryUrl image }}}" class="thumbnail product-images"> {{/if}}
+
+						<p>Quantity: {{qty}}</p>
+						{{#if qty}}
+						<p>In-Stock</p>
+						{{else}}
+						<p>Out of Stock</p>
+						{{/if}}
+					</div>
+					{{/each}}
+				</div>
+
+
+			</div>
+
+		</div>
+	</div>
+
+
+
+	<footer class="container-fluid" id="footer">
+
+		<div class="col-md-2">
+			<img src="https://image.flaticon.com/icons/svg/306/306810.svg" alt="Questions">
+
+		</div>
+
+		<div class="col-md-8 text-center">
+			<h2>Questions? Comments? Let us know!</h2>
+			<h5>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec dui orci, gravida sit amet enim vitae, rhoncus ultrices
+				massa. Quisque convallis purus ut sem accumsan viverra. Praesent interdum massa et venenatis convallis.</h5>
+		</div>
+
+		<div class="col-md-2">
+			<img src="https://image.flaticon.com/icons/svg/682/682055.svg" alt="Comments">
+		</div>
+	</div>
