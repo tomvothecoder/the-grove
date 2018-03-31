@@ -5827,9 +5827,9 @@ button.close {
   border-radius: 0px !important; }
 
 .body {
-  font-family: 'Quicksand', sans-serif; }
+  font-family: 'Oswald', sans-serif; }
 
-.container {
+.container .h3 {
   font-family: 'Quicksand', sans-serif; }
 
 #header {
@@ -5837,7 +5837,7 @@ button.close {
 
 .jumbotron {
   background-image: url("https://images.unsplash.com/photo-1490818387583-1baba5e638af?ixlib=rb-0.3.5&s=b6b4ac322517d8d4a3565438ed23d376&auto=format&fit=crop&w=1231&q=80");
-  background-size: 100%;
+  background-size: cover;
   height: 73vh;
   background-repeat: no-repeat;
   margin-bottom: auto;
@@ -5870,6 +5870,9 @@ button.close {
   width: 50%;
   height: 50%; }
 
+#options img:hover {
+  opacity: .5; }
+
 #product {
   text-align: center;
   float: center;
@@ -5891,9 +5894,16 @@ button.close {
   height: 200px;
   border-width: 0px; }
 
-#featured {
+#highlight {
   margin-top: 3%;
-  float: center; }
+  float: center;
+  /* 	background-color: #F4F5F7 */ }
+
+#groveimgs {
+  margin-bottom: 1%; }
+
+#featured {
+  margin-bottom: 1%; }
 
 #footer {
   font-size: 1.5em;
@@ -5962,8 +5972,8 @@ button.close {
   border: none; }
 
 .panel.panel-chat .panel-heading {
-  background: darkblue;
-  border: 1px solid #2e4588;
+  background: lightblue;
+  /* border: 1px solid #2e4588 */
   color: #FFF; }
 
 .panel.panel-chat .panel-heading a:nth-of-type(1) {
