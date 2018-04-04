@@ -295,3 +295,139 @@ $font-size-base: 14px;
 	height: 100%;
 }
 
+
+
+/* products.hbs */
+
+.products_jumbotron {
+	background-image: url("https://images.unsplash.com/photo-1498579397066-22750a3cb424?ixlib=rb-0.3.5&s=b4859af68fadcc23ccee0b83ff551245&auto=format&fit=crop&w=1350&q=80"); //opacity: 0.9;
+	background-size: 100%;
+	width: 100%;
+	margin-bottom: -20px;
+	height: 400px;
+	background-repeat: no-repeat;
+	min-height: 400px;
+}
+
+.product_header {
+	background-color:#ffd9b3;
+	padding-bottom:40px;
+	height:120px;
+}
+
+.product_header h3 {
+	color: white;
+	text-align: center;
+}
+
+.categories {
+	padding-left: 3%;
+	float:left;
+	width: 20%;
+	height: 100px;
+	// border-style: solid;
+	// border-color: black;
+}
+
+hr { 
+	width:95%; 
+	height:1px; 
+	background: #fff;
+	float:left;
+}
+
+.categories h4 {
+	text-align: left;
+}
+
+.categories h5 {
+	color: darkgray;
+}
+
+.product_list {
+	padding-top: 10px;
+	float:left;
+	width: 80%;
+	height: 400px;
+	// border-style: dashed;
+	// border-color:black;
+}
+
+// .column_1_products{
+// 	float: left;
+// 	width:30%;
+// 	border-style:dashed;
+// 	margin-right:10px;
+// }
+
+// .column_2_products{
+// 	float: left;
+// 	width:30%;
+// 	border-style:dashed;
+// 	margin-right:10px;
+// }
+
+// .column_3_products{
+// 	float:left;
+// 	width:30%;
+// 	border-style:dashed;
+// 	margin-right:10px;
+// }
+
+.glyphicon { margin-right:5px; }
+.thumbnail
+{
+    margin-bottom: 20px;
+    padding: 0px;
+    -webkit-border-radius: 0px;
+    -moz-border-radius: 0px;
+    border-radius: 0px;
+}
+
+.item.list-group-item
+{
+    float: left;
+    width: 150px;
+    background-color: #fff;
+    margin-bottom: 10px;
+}
+.item.list-group-item:nth-of-type(odd):hover,.item.list-group-item:hover
+{
+    background: #428bca;
+}
+
+.item.list-group-item .list-group-image
+{
+    margin-right: 10px;
+}
+.item.list-group-item .thumbnail
+{
+    margin-bottom: 0px;
+}
+.item.list-group-item .caption
+{
+    padding: 9px 9px 0px 9px;
+}
+.item.list-group-item:nth-of-type(odd)
+{
+    background: #eeeeee;
+}
+
+.item.list-group-item:before, .item.list-group-item:after
+{
+    display: table;
+    content: " ";
+}
+
+.item.list-group-item img
+{
+    float: left;
+}
+.item.list-group-item:after
+{
+    clear: both;
+}
+.list-group-item-text
+{
+    margin: 0 0 11px;
+}
