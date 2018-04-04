@@ -23,127 +23,95 @@
 			<h3>column 3</h3>
 		</div> --}}
 		<div class="container-fluid">
-
-			<div class="row categories">
-				<h4>Item Category</h4>
-				<h5>Snacks</h5>
-				<h5>Beverages</h5>
-				<h5>Candy</h5>
-				<h5>Condiments and Dressing</h5>
-				<h5>Pasta and Noodles</h5>
-				<h5>Prepared Meals</h5>
-				<h5>Frozen Food</h5>
-				<h5>Dairy</h5>
-			</div>
-
-
-			<div class="container">
-				<h3>Category Name</h3>
-				<div id="products" class="row list-group">
-					{{#each products}}
-					<div class="item  col-s-4 col-lg-4">
-						<div class="thumbnail img-fluid">
-							{{#if image}}
-							<img class="product-images group list-group-image" src="{{{cloudinaryUrl image }}}" alt=""> {{else}}
-							<img class="product-images group list-group-image" src="/images/placeholder.jpg" alt=""> {{/if}} {{!-- </div> --}}
-
-						<div class="caption">
-							<h4 class="group inner list-group-item-heading">
-								<a href="{{productUrl slug}}">{{{title}}}</a>
-							</h4>
-
-							<p class="group inner list-group-item-text">
-								Product description... Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt
-								ut laoreet dolore magna aliquam erat volutpat.</p>
-
-							{{!--
-							<div class="well">
-								{{&description}}
-							</div>
-							--}}
-							<div class="row">
-								<div class="col-xs-12 col-md-6">
-									<p>Quantity: {{qty}}</p>
-									{{#if qty}}
-									<p>In-Stock</p>
-									{{else}}
-									<p>Out of Stock</p>
-									{{/if}} 
-									
-									{{#if price}}
-									<p class="lead">${{{price}}}</p>
-									{{else}}
-									<p>Price: TBA</p>
-									{{/if}}
-								</div>
-
-								<div class="col-xs-12 col-md-6">
-									<a class="btn btn-success" href="http://www.jquery2dotnet.com">Add to cart</a>
-								</div>
-							</div>
-						</div>
-					</div>
-
+			<div class="row">
+				<div class="col-md-4 categories">
+					<h4>Item Category</h4>
+					<h5>Snacks</h5>
+					<h5>Beverages</h5>
+					<h5>Candy</h5>
+					<h5>Condiments and Dressing</h5>
+					<h5>Pasta and Noodles</h5>
+					<h5>Prepared Meals</h5>
+					<h5>Frozen Food</h5>
+					<h5>Dairy</h5>
 				</div>
-				{{/each}} {{!--
-				<div class="item  col-xs-4 col-lg-4">
-					<div class="thumbnail">
-						<img class="group list-group-image" src="http://placehold.it/400x250/000/fff" alt="" />
-						<div class="caption">
-							<h4 class="group inner list-group-item-heading">
-								Product title</h4>
-							<p class="group inner list-group-item-text">
-								Product description... Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt
-								ut laoreet dolore magna aliquam erat volutpat.</p>
-							<div class="row">
-								<div class="col-xs-12 col-md-6">
-									<p class="lead">
-										$21.000</p>
+
+				<h3>Category Name</h3>
+				<div class="col-md-8">
+					<div id="products" class="list-group">
+						{{#each products}}
+						<div class="item  col-s-4 col-md-4 col-lg-4">
+							<div class="thumbnail img-fluid">
+								{{#if image}}
+								<img class="product-images group list-group-image" src="{{{cloudinaryUrl image }}}" alt=""> {{else}}
+								<img class="product-images group list-group-image" src="/images/placeholder.jpg" alt=""> {{/if}} {{!-- </div> --}}
+
+							<div class="caption">
+								<h4 class="group inner list-group-item-heading">
+									<a href="{{productUrl slug}}">{{{title}}}</a>
+								</h4>
+
+								<p class="group inner list-group-item-text">
+									Product description... Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt
+									ut laoreet dolore magna aliquam erat volutpat.</p>
+
+								{{!--
+								<div class="well">
+									{{&description}}
 								</div>
-								<div class="col-xs-12 col-md-6">
-									<a class="btn btn-success" href="http://www.jquery2dotnet.com">Add to cart</a>
+								--}}
+								<div class="row">
+									<div class="col-xs-12 col-md-12">
+										<p>Quantity: {{qty}}</p>
+										{{#if qty}}
+										<p>In-Stock</p>
+										{{else}}
+										<p>Out of Stock</p>
+										{{/if}} {{#if price}}
+										<p class="lead">${{{price}}}</p>
+										{{else}}
+										<p>Price: TBA</p>
+										{{/if}}
+									</div>
+
+									<div class="col-xs-12 col-md-12">
+										<a class="btn btn-success" href="http://www.jquery2dotnet.com">Add to cart</a>
+									</div>
 								</div>
 							</div>
 						</div>
-					</div>
-				</div> --}}
-			</div>
-		</div>
-	</div>
-	</div>
 
-	{{!--
-	<div class="container">
-
-		<div class="row">
-			<div class="col-md-12 col-lg-12">
-				<div class="row">
-					{{# each products}}
-					<div class="col-md-4 col-lg-4">
-						<h2>
-							<a href="{{productUrl slug}}">{{{title}}}</a>
-
-						</h2>
-
-						{{#if image}}
-						<img src="{{{cloudinaryUrl image }}}" class="thumbnail product-images"> {{/if}}
-
-						<p>Quantity: {{qty}}</p>
-						{{#if qty}}
-						<p>In-Stock</p>
-						{{else}}
-						<p>Out of Stock</p>
-						{{/if}}
 					</div>
 					{{/each}}
 				</div>
-
-
 			</div>
-
 		</div>
 
-	</div>
-	--}}
+
+		{{!--
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12 col-lg-12">
+					<div class="row">
+						{{# each products}}
+						<div class="col-md-4 col-lg-4">
+							<h2>
+								<a href="{{productUrl slug}}">{{{title}}}</a>
+							</h2>
+							{{#if image}}
+							<img src="{{{cloudinaryUrl image }}}" class="thumbnail product-images"> {{/if}}
+							<p>Quantity: {{qty}}</p>
+							{{#if qty}}
+							<p>In-Stock</p>
+							{{else}}
+							<p>Out of Stock</p>
+							{{/if}}
+						</div>
+						{{/each}}
+					</div>
+				</div>
+			</div>
+		</div>
+		--}}
 
 </body>
