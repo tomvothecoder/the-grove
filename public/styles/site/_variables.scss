@@ -524,3 +524,29 @@ div #grove-name {
 	text-align: center;
 }
 
+.blog_jumbotron 
+{
+	background-image: url("https://images.unsplash.com/photo-1506553493793-ccfd9f4371fa?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=b9290f5dbdcfc448bbfd336e8b73a103&auto=format&fit=crop&w=1334&q=80");
+	//background-size: 100% auto;
+	background-size:cover;
+
+	height: 70vh;
+	background-repeat: no-repeat;
+	margin-bottom: auto;
+	margin: 0 auto;
+}
+
+.blog_header {
+	background-color:#ffd9b3;
+	padding-bottom:40px;
+	height:140px;
+}
+
+.blog_header h4 {
+	text-align: center;
+}
+
+.blog_header h3 {
+	color: white;
+	text-align: center;
+}
