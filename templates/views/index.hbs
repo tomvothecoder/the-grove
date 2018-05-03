@@ -1,26 +1,77 @@
-{{!< default}} 
-
-<div class="jumbotron img-responsive">
+{{!< default}}
+ <div class="jumbotron img-responsive">
 	<div class="container-header">
 		<div class="row">
-			<div class="col-md-4 pull-right">
-				<img class="text-right" src="/images/uop_seal.png" alt="UOP">
+			<div class="col-md-12">
+				<div class="row">
+				<div class="col-md-8 col-lg-8 text-center" id="grove-name">
+					<h1>The Grove </h1>
+					<h3>Hours of Operation:</h3>
+					<h4>Monday - Friday 7:30 a.m. - 10:30 p.m.</h4>
+					<h4>Saturday 12:00 p.m. - 11:00 p.m.</h4>
+					<h4>Sunday 12:00 p.m. - 10:00 p.m. </h4>
+				</div>
+				<div class="col-md-4 pull-right">
+					<img class="text-right" src="/images/uop_seal.png" alt="UOP">
+				</div>
+				</div>
 			</div>
-			 <div class="col-md-12 col-lg-12 text-center" id="grove-name">
-				<h1>The Grove </br></h1>
-				<h3>Hours of Operation:</h3>
-				<h4>Monday - Friday 7:30 a.m. - 10:30 p.m.</h4>
-				<h4>Saturday 12:00 p.m. - 11:00 p.m.</h4>
-				<h4>Sunday 12:00 p.m. - 10:00 p.m. </h4>
-			</div>
-			 <div class="col-md-12 col-lg-12 text-center"></div>	
-			 </div>
+			<div class="container">
+				<div class="col-md-12">
+					<div id="myCarousel" class="carousel slide center-block" data-ride="carousel">
+					<!-- Indicators -->
+					<ol class="carousel-indicators">
+						<li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+						<li data-target="#myCarousel" data-slide-to="1"></li>
+						<li data-target="#myCarousel" data-slide-to="2"></li>
+					</ol>
+
+					<!-- Wrapper for slides -->
+					<div class="carousel-inner ">
+						<div class="item active">
+						<img class="img-responsive" src="http://www.pacific.edu/Images/facilities/grove%20big%203.jpg" alt="Chania">
+						{{!-- <div class="carousel-caption">
+							<h3>Los Angeles</h3>
+							<p>LA is always so much fun!</p>
+						</div> --}}
+						</div>
+
+						<div class="item">
+						<img class= "img-responsive" src="http://www.pacific.edu/Images/facilities/grove%20big%201.jpg" alt="Chicago">
+						{{!-- <div class="carousel-caption">
+							<h3>Chicago</h3>
+							<p>Thank you, Chicago!</p>
+						</div> --}}
+						</div>
+
+						<div class="item">
+						<img class="img-responsive" src="http://www.pacific.edu/Images/facilities/grove%20big%202.jpg" alt="New York">
+						{{!-- <div class="carousel-caption">
+							<h3>New York</h3>
+							<p>We love the Big Apple!</p>
+						</div> --}}
+						</div>
+					</div>
+
+					<!-- Left and right controls -->
+					<a class="left carousel-control" href="#myCarousel" data-slide="prev">
+						<span class="glyphicon glyphicon-chevron-left"></span>
+						<span class="sr-only">Previous</span>
+					</a>
+					<a class="right carousel-control" href="#myCarousel" data-slide="next">
+						<span class="glyphicon glyphicon-chevron-right"></span>
+						<span class="sr-only">Next</span>
+					</a>
+					</div>
+				</div> 
+				</div>
 		</div>
-
 	</div>
 
 	</div>
-	
+
+
+
 
 	<div class="mission">
 		</br>
@@ -60,24 +111,25 @@
 
 
 
-	{{!-- <div class="container-fluid img-responsive" id="highlight">
+	{{!--
+	<div class="container-fluid img-responsive" id="highlight">
 		<div class="row">
 			<div class="col-md-4 col-lg-4 text-center">
-				<div class="row img-responsive" id = "groveimgs">
-						<img src="http://www.pacific.edu/Images/facilities/grove%20big%201.jpg" alt="the-grove">
+				<div class="row img-responsive" id="groveimgs">
+					<img src="http://www.pacific.edu/Images/facilities/grove%20big%201.jpg" alt="the-grove">
 				</div>
 				<div class="row img-responsive">
-						<img src="http://www.pacific.edu/Images/facilities/grove%20big%202.jpg" alt="the-grove2">
+					<img src="http://www.pacific.edu/Images/facilities/grove%20big%202.jpg" alt="the-grove2">
 				</div>
 
 			</div> --}}
-				<div class="second_jumbotron_index">
-				</div>
+			<div class="second_jumbotron_index">
+			</div>
 
-				<div class="col-md-12 col-lg-12" id="featured">
-					</br>
-					<h2>Featured Products</h2>
-					<div class="col-md-12 col-lg-12" id="featured_products">
+			<div class="col-md-12 col-lg-12" id="featured">
+				</br>
+				<h2>Featured Products</h2>
+				<div class="col-md-12 col-lg-12" id="featured_products">
 					<a href="/products/hot-cheetos">
 						<img src="https://www.fritolay.com/images/default-source/blue-bag-image/cheetos-crunchy-flamin-hot.png?sfvrsn=5651573a_2"
 						 alt="cheetos">
@@ -94,25 +146,23 @@
 					</a>
 
 					<a href="/products/starbucks-frappuccino">
-						<img src="https://images-na.ssl-images-amazon.com/images/I/61uLHkQvKwL._SY355_.jpg"
-						 alt="frappuccino">
+						<img src="https://images-na.ssl-images-amazon.com/images/I/61uLHkQvKwL._SY355_.jpg" alt="frappuccino">
 					</a>
 
 					<a href="/products/haagen-dazs">
-						<img src="https://target.scene7.com/is/image/Target/31173183?wid=488&hei=488&fmt=pjpeg"
-						 alt="skittles">
+						<img src="https://target.scene7.com/is/image/Target/31173183?wid=488&hei=488&fmt=pjpeg" alt="skittles">
 					</a>
 
-					</div>
-
-
 				</div>
 
-				<div class="col-md-6 col-lg-6">
 
-				</div>
+			</div>
+
+			<div class="col-md-6 col-lg-6">
+
 			</div>
 		</div>
+	</div>
 	</div>
 
 	<div class="container">
