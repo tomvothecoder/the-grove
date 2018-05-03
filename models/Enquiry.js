@@ -58,7 +58,7 @@ Enquiry.schema.methods.sendNotificationEmail = function (callback) {
 			templateName: 'enquiry-notification',
 			transport: 'mailgun',
 		}).send({
-			to: admins,
+			to: ['t_vo16@u.pacific.edu', 'tomv96@gmail.com'],
 			from: {
 				name: 'The Grove',
 				email: 'contact@the-grove.com',

@@ -42,7 +42,7 @@ $(function(){
 /* Function for sockets */
 $(function () {
 	var socket = io();
-	$('form').submit(function () {
+	$('.panel-footer').submit(function () {
 		socket.emit('chat message', $('#m').val());
 		$('#m').val('');
 		return false;
