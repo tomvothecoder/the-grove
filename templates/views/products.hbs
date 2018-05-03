@@ -5,27 +5,20 @@
 
 	<div class="product_header">
 		</br>
-		<h3>Take a look at what's in new in store!</h3>
+		<h3>Take a look at what's in new in store!</h3> 
+		<h4>You can find all your grocery essentials here, from cleaning supplies to grab-n-go snacks!</h4></br>
 	</div>
 
-	{{!--
-	<div class="product_list">
-		<h3>Category Name</h3>
-		<div class="block_1"></div>
-		<hr /> --}}{{!--
-		<div class="column_1_products">
-			<h3>column 1</h3>
-		</div>
-		<div class="column_2_products">
-			<h3>column 2</h3>
-		</div>
-		<div class="column_3_products">
-			<h3>column 3</h3>
-		</div> --}}
+
+
+	
+
+
+
 		<div class="container-fluid">
 			<div class="row">
 				<div class="col-md-4 categories">
-					<h4>Item Category</h4>
+					{{!-- <h4>Item Category</h4>
 					<h5>Snacks</h5>
 					<h5>Beverages</h5>
 					<h5>Candy</h5>
@@ -33,7 +26,7 @@
 					<h5>Pasta and Noodles</h5>
 					<h5>Prepared Meals</h5>
 					<h5>Frozen Food</h5>
-					<h5>Dairy</h5>
+					<h5>Dairy</h5> --}}
 				</div>
 
 				<h3>Category Name</h3>
@@ -87,31 +80,5 @@
 			</div>
 		</div>
 
-
-		{{!--
-		<div class="container">
-			<div class="row">
-				<div class="col-md-12 col-lg-12">
-					<div class="row">
-						{{# each products}}
-						<div class="col-md-4 col-lg-4">
-							<h2>
-								<a href="{{productUrl slug}}">{{{title}}}</a>
-							</h2>
-							{{#if image}}
-							<img src="{{{cloudinaryUrl image }}}" class="thumbnail product-images"> {{/if}}
-							<p>Quantity: {{qty}}</p>
-							{{#if qty}}
-							<p>In-Stock</p>
-							{{else}}
-							<p>Out of Stock</p>
-							{{/if}}
-						</div>
-						{{/each}}
-					</div>
-				</div>
-			</div>
-		</div>
-		--}}
 
 </body>
