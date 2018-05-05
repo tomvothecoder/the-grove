@@ -56,13 +56,13 @@
 								<div class="thumbnail">
 									{{#if image}}
 									<a href="{{productUrl slug}}">
-										<img class="product-images group list-group-image img-responsive img-thumbnail hvr-grow" src="{{{cloudinaryUrl image }}}"
-										 alt="">
+										<img class="product-images group list-group-image img-responsive hvr-grow" src="{{{cloudinaryUrl image }}}" alt="">
 									</a>
 									{{else}}
 									<a href="{{productUrl slug}}">
-										<img class="product-images group list-group-image img-responsive hvr-grow" src="/images/placeholder.jpg" alt=""> {{/if}} {{!-- </div> --}}
-								</a>
+										<img class="product-images group list-group-image img-responsive hvr-grow" src="/images/placeholder.jpg" alt=""> {{/if}}
+									</a>
+								
 							</div>
 							<div class="col-md-12">
 
@@ -72,7 +72,7 @@
 									</h4>
 
 									<p class="group inner list-group-item-text">
-										Product description... Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt
+										Product description: Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt
 										ut laoreet dolore magna aliquam erat volutpat.</p>
 
 									{{!--
@@ -105,6 +105,6 @@
 			</div>
 		</div>
 	</div>
-	
+
 
 </body>
