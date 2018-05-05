@@ -37,7 +37,7 @@ Product.add({
 	},
 	itemType: {
 		type: String,
-        enum: ['Cereal', 'Chips', 'Personal', 'Medicine'],
+        enum: ['Drink', 'Candy', 'Cereal', 'Chips', 'Dessert', 'Hot Food', 'Personal', 'Medicine'],
         
 	},
 	image: {
