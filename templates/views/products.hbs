@@ -5,87 +5,103 @@
 
 	<div class="product_header">
 		</br>
-		<h3>Take a look at what's in new in store!</h3> 
-		<h4>You can find all your grocery essentials here, from cleaning supplies to grab-n-go snacks!</h4></br>
+		<h3>Take a look at what's in new in store!</h3>
+		<h4>You can find all your grocery essentials here, from cleaning supplies to grab-n-go snacks!</h4>
+		</br>
 	</div>
 
-	<div class="product_cat">
-  	<div class="col-sm-3" id="drinks">
-		  <h3>Drinks</h3>
-		  <h5>Check out our selection of beverages from Pepsi to Gatorade</h5>
-		  <img class="center-block" src="https://image.flaticon.com/icons/svg/135/135764.svg" />
+	<div class="container-fluid">
+		<div class="row">
+
+			<div class="product_cat">
+				<div class="col-md-3" id="drinks">
+					<h3>Drinks</h3>
+					<h5>Check out our selection of beverages from Pepsi to Gatorade</h5>
+					<img class="center-block img-responsive" src="https://image.flaticon.com/icons/svg/135/135764.svg" />
+				</div>
+				<div class="col-md-3" id="snacks">
+					<h3>Snacks</h3>
+					<h5>Choose from a variety of snacks to satisfy your cravings</h5>
+					<img class="center-block img-responsive" src="https://image.flaticon.com/icons/svg/362/362281.svg" />
+				</div>
+				<div class="col-md-3" id="cleaning">
+					<h3>Cleaning Supplies</h3>
+					<h5>We've got all your necessary supplies from detergent to napkins</h5>
+					<img class="center-block img-responsive" src="https://image.flaticon.com/icons/svg/353/353682.svg" />
+
+				</div>
+				<div class="col-md-3" id="health">
+					<h3>Health</h3>
+					<h5>From Claritin to Tylenol, we've got you covered</h5>
+					<img class="center-block img-responsive" src="https://image.flaticon.com/icons/svg/706/706189.svg" />
+
+				</div>
+			</div>
+
 		</div>
-  	<div class="col-sm-3" id="snacks">
-		  <h3>Snacks</h3>
-		  <h5>Choose from a variety of snacks to satisfy your cravings</h5>
-		  <img class="center-block" src="https://image.flaticon.com/icons/svg/362/362281.svg" />
-	  </div>
-  	<div class="col-sm-3" id="cleaning">
-		  <h3>Cleaning Supplies</h3>
-		  <h5>We've got all your necessary supplies from detergent to napkins</h5>
-		  <img class="center-block" src="https://image.flaticon.com/icons/svg/353/353682.svg" />
-
-	  </div>
-	<div class="col-sm-3" id="health">
-		<h3>Health</h3>
-		<h5>From Claritin to Tylenol, we've got you covered</h5>
-		<img class="center-block" src="https://image.flaticon.com/icons/svg/706/706189.svg" />
-
 	</div>
-	</div>
-	
-		<div class="container-fluid">
+
+	<div class="container-fluid">
+		<div class="row">
+			<h1 class="text-center" id="topproducts">Top Products</h1>
 			<div class="col-md-12">
-				<h3>Top Products</h3>
-				<div class="col-md-12">
-					<div id="products" class="list-group">
-						{{#each products}}
-						<div class="item  col-s-4 col-md-4 col-lg-4">
-							<div class="thumbnail img-fluid">
-								{{#if image}}
-								<img class="product-images group list-group-image" src="{{{cloudinaryUrl image }}}" alt=""> {{else}}
-								<img class="product-images group list-group-image" src="/images/placeholder.jpg" alt=""> {{/if}} {{!-- </div> --}}
+				<div id="products" class="list-group">
+					{{#each products}}
+					<div class="item  col-s-3 col-md-3 col-lg-3">
+						<div class="row">
+							<div class="col-s-12 col-md-12 col-lg-12">
+								<div class="thumbnail">
+									{{#if image}}
+									<a href="{{productUrl slug}}">
+										<img class="product-images group list-group-image img-responsive img-thumbnail hvr-grow" src="{{{cloudinaryUrl image }}}"
+										 alt="">
+									</a>
+									{{else}}
+									<a href="{{productUrl slug}}">
+										<img class="product-images group list-group-image img-responsive hvr-grow" src="/images/placeholder.jpg" alt=""> {{/if}} {{!-- </div> --}}
+								</a>
+							</div>
+							<div class="col-s-12 col-md-12 col-lg-12">
 
-							<div class="caption">
-								<h4 class="group inner list-group-item-heading">
-									<a href="{{productUrl slug}}">{{{title}}}</a>
-								</h4>
+								<div class="caption" id="captionbox">
+									<h4 class="group inner list-group-item-heading">
+										<a href="{{productUrl slug}}">{{{title}}}</a>
+									</h4>
 
-								<p class="group inner list-group-item-text">
-									Product description... Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt
-									ut laoreet dolore magna aliquam erat volutpat.</p>
+									<p class="group inner list-group-item-text">
+										Product description... Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt
+										ut laoreet dolore magna aliquam erat volutpat.</p>
 
-								{{!--
-								<div class="well">
-									{{&description}}
-								</div>
-								--}}
-								<div class="row">
-									<div class="col-xs-12 col-md-12">
-										<p>Quantity: {{qty}}</p>
-										{{#if qty}}
-										<p>In-Stock</p>
-										{{else}}
-										<p>Out of Stock</p>
-										{{/if}} {{#if price}}
-										<p class="lead">${{{price}}}</p>
-										{{else}}
-										<p>Price: TBA</p>
-										{{/if}}
+									{{!--
+									<div class="well">
+										{{&description}}
 									</div>
-
-									{{!-- <div class="col-xs-12 col-md-12">
-										<a class="btn btn-success" href="http://www.jquery2dotnet.com">View Details</a>
-									</div> --}}
+									--}}
+									<div class="row">
+										<div class="col-xs-12 col-md-12">
+											<p>Quantity: {{qty}}</p>
+											{{#if qty}}
+											<p>In-Stock</p>
+											{{else}}
+											<p>Out of Stock</p>
+											{{/if}} {{#if price}}
+											<p class="lead">${{{price}}}</p>
+											{{else}}
+											<p>Price: TBA</p>
+											{{/if}}
+										</div>
+									</div>
+									
 								</div>
 							</div>
 						</div>
-
 					</div>
-					{{/each}}
+
 				</div>
+				{{/each}}
 			</div>
 		</div>
+	</div>
 
 
 </body>
