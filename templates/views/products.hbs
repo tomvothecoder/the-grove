@@ -14,11 +14,13 @@
 		<div class="row">
 
 			<div class="product_cat">
+
 				<div class="col-md-3" id="drinks">
 					<h3>Drinks</h3>
 					<h5>Check out our selection of beverages from Pepsi to Gatorade</h5>
 					<img class="center-block img-responsive" src="https://image.flaticon.com/icons/svg/135/135764.svg" />
 				</div>
+
 				<div class="col-md-3" id="snacks">
 					<h3>Snacks</h3>
 					<h5>Choose from a variety of snacks to satisfy your cravings</h5>
@@ -36,6 +38,7 @@
 					<img class="center-block img-responsive" src="https://image.flaticon.com/icons/svg/706/706189.svg" />
 
 				</div>
+
 			</div>
 
 		</div>
@@ -47,9 +50,9 @@
 			<div class="col-md-12">
 				<div id="products" class="list-group">
 					{{#each products}}
-					<div class="item  col-s-3 col-md-3 col-lg-3">
+					<div class="item col-md-3 col-lg-3">
 						<div class="row">
-							<div class="col-s-12 col-md-12 col-lg-12">
+							<div class="col-md-12">
 								<div class="thumbnail">
 									{{#if image}}
 									<a href="{{productUrl slug}}">
@@ -61,7 +64,7 @@
 										<img class="product-images group list-group-image img-responsive hvr-grow" src="/images/placeholder.jpg" alt=""> {{/if}} {{!-- </div> --}}
 								</a>
 							</div>
-							<div class="col-s-12 col-md-12 col-lg-12">
+							<div class="col-md-12">
 
 								<div class="caption" id="captionbox">
 									<h4 class="group inner list-group-item-heading">
@@ -78,7 +81,7 @@
 									</div>
 									--}}
 									<div class="row">
-										<div class="col-xs-12 col-md-12">
+										<div class="col-md-12">
 											<p>Quantity: {{qty}}</p>
 											{{#if qty}}
 											<p>In-Stock</p>
@@ -91,7 +94,7 @@
 											{{/if}}
 										</div>
 									</div>
-									
+
 								</div>
 							</div>
 						</div>
@@ -102,6 +105,6 @@
 			</div>
 		</div>
 	</div>
-
+	
 
 </body>

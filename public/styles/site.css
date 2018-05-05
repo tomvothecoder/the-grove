@@ -6310,10 +6310,6 @@ hr {
   width: 100%;
   height: 100%; }
 
-.product_cat {
-  height: 300px;
-  width: 100%; }
-
 /* Pulse */
 @-webkit-keyframes hvr-pulse {
   25% {
