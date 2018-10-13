@@ -1,0 +1,20 @@
+# Snyk (https://snyk.io) policy file, patches or ignores known vulnerabilities.
+version: v1.12.0
+ignore: {}
+# patches apply the minimum changes required to fix a vulnerability
+patch:
+  'npm:debug:20170905':
+    - keystone > knox > debug:
+        patched: '2018-10-13T00:06:04.687Z'
+  'npm:hoek:20180212':
+    - keystone > watchify > chokidar > fsevents > node-pre-gyp > hawk > hoek:
+        patched: '2018-10-13T00:06:04.687Z'
+    - keystone > watchify > chokidar > fsevents > node-pre-gyp > hawk > sntp > hoek:
+        patched: '2018-10-13T00:06:04.687Z'
+    - keystone > watchify > chokidar > fsevents > node-pre-gyp > hawk > boom > hoek:
+        patched: '2018-10-13T00:06:04.687Z'
+    - keystone > watchify > chokidar > fsevents > node-pre-gyp > hawk > cryptiles > boom > hoek:
+        patched: '2018-10-13T00:06:04.687Z'
+  'npm:ms:20170412':
+    - keystone > knox > debug > ms:
+        patched: '2018-10-13T00:06:04.687Z'
