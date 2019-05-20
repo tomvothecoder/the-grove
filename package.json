@@ -10,7 +10,7 @@
     "enum": "^2.5.0",
     "express-handlebars": "3.0.0",
     "handlebars": "4.0.11",
-    "keystone": "4.0.0-beta.8",
+    "keystone": "4.1.0",
     "keystone-email": "1.0.5",
     "lodash": "^4.17.10",
     "moment": "2.20.1",
